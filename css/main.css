@@ -1,0 +1,496 @@
+@charset "UTF-8";
+/* 타이틀 / 서브타이틀 */
+@font-face {
+  font-family: "RiaSansBold";
+  src: url("./font/리아산스-볼드.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RiaSans-ExtraBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/RiaSans-ExtraBold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+/* 본문 */
+@font-face {
+  font-family: "Paperlogy 4";
+  src: url("Paperlogy-4Regular.woff2") format("woff2"), url("Paperlogy-4Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: "Paperlogy 4";
+}
+
+.font-b {
+  font-family: "RiaSansBold", sans-serif;
+}
+
+.font-xb {
+  font-family: "RiaSans-ExtraBold";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  color: black;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 4em;
+}
+
+header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+header nav {
+  background: transparent !important;
+}
+header nav #navbarDropdownMenuLink {
+  color: #ff001e;
+  font-size: 22px !important;
+  letter-spacing: 1px;
+}
+
+header.scrolled {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 990px) {
+  .navbar-nav {
+    background: rgba(255, 255, 255, 0.5) !important;
+  }
+}
+footer {
+  width: 100%;
+  background: url(../img/bg/footer-bg.png) no-repeat center;
+  background-size: cover;
+}
+footer .footer-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  box-sizing: border-box;
+  padding-top: 2%;
+}
+footer .footer-wrap .footer-title {
+  margin-bottom: 30px;
+}
+footer .footer-wrap .footer-desc {
+  font-size: 20px;
+}
+
+@media (max-width: 1200px) and (min-width: 769px) {
+  .title {
+    margin-bottom: 20px;
+    font-size: 3em;
+  }
+  .sec3-subtitle {
+    font-size: 2em !important;
+  }
+  .footer-title {
+    font-size: 30px;
+    margin-bottom: 20px !important;
+  }
+  .footer-desc {
+    font-size: 16px !important;
+  }
+  .custom-arrow {
+    width: 100px !important;
+    height: 100px !important;
+  }
+  .carousel-control-prev .custom-arrow {
+    left: -100px !important;
+  }
+  .carousel-control-next .custom-arrow {
+    right: -100px !important;
+  }
+  .footer-logo {
+    width: 200px;
+    height: 200px;
+  }
+  .footer-logo > img {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 768px) and (min-width: 375px) {
+  .sec1_img {
+    background: url(../img/banner/juicy_banner_mobile.png) center center no-repeat !important;
+  }
+  .title {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+  }
+  .sec3-subtitle {
+    font-size: 1.5em !important;
+  }
+  .footer-title {
+    font-size: 20px;
+    margin-bottom: 10px !important;
+  }
+  .footer-desc {
+    font-size: 12px !important;
+  }
+  .accordion-body {
+    font-size: 1.5em !important;
+    text-align: center;
+    padding: 30px 0 !important;
+  }
+  .custom-arrow {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  .carousel-control-prev .custom-arrow {
+    left: -50px !important;
+  }
+  .carousel-control-next .custom-arrow {
+    right: -50px !important;
+  }
+  .footer-logo {
+    width: 130px;
+    height: 130px;
+  }
+  .footer-logo > img {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 374px) and (min-width: 310px) {
+  .sec1_img {
+    background: url(../img/banner/juicy_banner_mobile.png) center center no-repeat !important;
+    background-size: cover !important;
+  }
+  .title {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+  }
+  .sec3-subtitle {
+    font-size: 1em !important;
+  }
+  .footer-title {
+    font-size: 16px;
+    margin-bottom: 10px !important;
+  }
+  .footer-desc {
+    font-size: 11px !important;
+    text-align: center;
+  }
+  .accordion-button {
+    font-size: 20px !important;
+  }
+  .accordion-body {
+    font-size: 1em !important;
+    text-align: center;
+    padding: 20px 0 !important;
+  }
+  .custom-arrow {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .carousel-control-prev .custom-arrow {
+    left: -30px !important;
+  }
+  .carousel-control-next .custom-arrow {
+    right: -30px !important;
+  }
+  .footer-wrap {
+    flex-direction: column;
+    gap: 20px !important;
+  }
+  .footer-wrap .footer-logo {
+    width: 130px;
+    height: 130px;
+  }
+  .footer-wrap .footer-logo > img {
+    width: 100%;
+    height: 100%;
+  }
+  .footer-wrap .footer-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.main-wrapper .sec1 {
+  width: 100%;
+  height: 100vh;
+}
+.main-wrapper .sec1 .sec1_img {
+  width: 100%;
+  height: 100%;
+  background: url(../img/banner/juicy_banner.svg) center center no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+.main-wrapper .sec2 {
+  width: 90%;
+  max-width: 1720px;
+  margin: 0 auto;
+}
+.main-wrapper .sec2 > .title {
+  color: #ff001e;
+}
+.main-wrapper .sec2 .fruits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+.main-wrapper .sec2 .fruit {
+  background-size: cover;
+  background-position: center;
+  aspect-ratio: 27/40;
+  transition: opacity 0.5s ease;
+}
+.main-wrapper .sec2 .fruit .label {
+  font-size: 32px;
+  font-weight: bold;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: 80%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.main-wrapper .sec2 .fruit:hover {
+  background-size: contain;
+}
+.main-wrapper .sec2 .fruit:hover .label {
+  opacity: 1;
+}
+.main-wrapper .sec3 {
+  width: 100%;
+  background-color: #ff001e;
+  height: auto;
+  padding: 30px 0;
+}
+.main-wrapper .sec3 > .title {
+  color: #fff;
+}
+.main-wrapper .sec3 .sec3-subtitle {
+  color: white;
+  font-size: 3em;
+  text-align: center;
+}
+.main-wrapper .sec3 .my-accordion {
+  width: 80%;
+  max-width: 1520px;
+  margin: 0 auto;
+}
+.main-wrapper .sec3 .my-accordion .accordion-button {
+  font-size: 30px;
+  padding: 20px 20px;
+  background-color: #ff001e;
+  color: #fff;
+  display: flex;
+  justify-content: space-between; /* ← 좌우 정렬 */
+  align-items: center;
+}
+.main-wrapper .sec3 .my-accordion .accordion-button span {
+  flex-grow: 1;
+}
+.main-wrapper .sec3 .my-accordion .menu-img {
+  width: 100px;
+  height: auto;
+  margin-left: 20px;
+}
+.main-wrapper .sec3 .my-accordion .accordion-body {
+  font-size: 2em;
+  text-align: center;
+  padding: 50px 0;
+}
+.main-wrapper .sec4 {
+  width: 80%;
+  max-width: 1520px;
+  margin: 0 auto;
+}
+.main-wrapper .sec4 > .title {
+  color: #ff001e;
+}
+.main-wrapper .sec4 .carousel-wrap {
+  position: relative;
+  width: 100%;
+}
+.main-wrapper .sec4 .carousel-wrap .carousel {
+  position: relative;
+}
+.main-wrapper .sec4 .carousel-wrap .custom-arrow {
+  width: 130px;
+  height: 130px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.main-wrapper .sec4 .carousel-wrap .carousel-control-prev .custom-arrow {
+  left: -150px;
+}
+.main-wrapper .sec4 .carousel-wrap .carousel-control-next .custom-arrow {
+  right: -150px;
+}
+.main-wrapper .sec4 .posters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/bg/sub-bg.png) no-repeat;
+  background-size: contain;
+  margin-top: 30px;
+}
+.main-wrapper .sec4 .posters .poster {
+  width: 40%;
+  aspect-ratio: 5/7;
+  background-size: contain;
+  margin: 30px 0 100px 0;
+}
+
+/*이미지 경로*/
+.abo {
+  background: url(../img/fruits/avocado_1.jpg);
+}
+
+.banana {
+  background: url(../img/fruits/banana_1.jpg);
+}
+
+.orange {
+  background: url(../img/fruits/orange_2.jpg);
+}
+
+.kiwi {
+  background: url(../img/fruits/kiwifruit_3.jpg);
+}
+
+.blue {
+  background: url(../img/fruits/blueberries_1.jpg);
+}
+
+.mango {
+  background: url(../img/fruits/mango_1.jpg);
+}
+
+.grape {
+  background: url(../img/fruits/grapefruit_1.jpg);
+}
+
+.pine {
+  background: url(../img/fruits/pineapple.jpg);
+}
+
+.tomato {
+  background: url(../img/fruits/tomato_1.jpg);
+}
+
+.watermelon {
+  background: url(../img/fruits/watermelon_2.jpg);
+}
+
+.hongsi {
+  background: url(../img/fruits/hongsi.jpg);
+}
+
+.apple {
+  background: url(../img/fruits/apple.jpg);
+}
+
+.abo:hover {
+  background: url(../img/juice/avocado_juice.png) no-repeat;
+  background-color: #e6fcc2;
+}
+
+.banana:hover {
+  background: url(../img/juice/banana_juice.png) no-repeat;
+  background-color: #fcf8c2;
+}
+
+.orange:hover {
+  background: url(../img/juice/orange_juice.png) no-repeat;
+  background-color: #fcdcc2;
+}
+
+.kiwi:hover {
+  background: url(../img/juice/kiwi_juice.png) no-repeat;
+  background-color: #c2fccc;
+}
+
+.blue:hover {
+  background: url(../img/juice/blueberry_juice.png) no-repeat;
+  background-color: #d3c2fc;
+}
+
+.mango:hover {
+  background: url(../img/juice/mango_juice.png) no-repeat;
+  background-color: #fff7b2;
+}
+
+.grape:hover {
+  background: url(../img/juice/grapesfruit_juice.png) no-repeat;
+  background-color: #fcc2d0;
+}
+
+.pine:hover {
+  background: url(../img/juice/pineapple_juice.png) no-repeat;
+  background-color: #fcf3c2;
+}
+
+.tomato:hover {
+  background: url(../img/juice/tomato_juice.png) no-repeat;
+  background-color: #fcc2c2;
+}
+
+.watermelon:hover {
+  background: url(../img/juice/watermelon_juice.png) no-repeat;
+  background-color: #7ccc90;
+}
+
+.hongsi:hover {
+  background: url(../img/juice/hongsi_juice.png) no-repeat;
+  background-color: #fccf8d;
+}
+
+.apple:hover {
+  background: url(../img/juice/apple_juice.png) no-repeat;
+  background-color: #fcc2c2;
+}
+
+.poster1 {
+  background: url(../img/poster/poster_1.jpg);
+}
+
+.poster2 {
+  background: url(../img/poster/poster_2.jpg);
+}/*# sourceMappingURL=main.css.map */

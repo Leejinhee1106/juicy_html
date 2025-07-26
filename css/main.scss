@@ -1,0 +1,226 @@
+@import 'font';
+@import 'settings';
+@import 'include';
+@import 'media';
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 100px; 
+    .sec1 {
+        width: 100%;
+        height: 100vh;
+        .sec1_img {
+            width: 100%;
+            height: 100%;
+            background: url(../img/banner/juicy_banner.svg) center center no-repeat;
+            background-size: cover;
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    .sec2 {
+       width: 90%;
+       max-width: 1720px;
+       margin: 0 auto;
+        >.title {color: #ff001e;}
+        .fruits {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        padding: 1rem;
+        }
+        .fruit {
+        background-size: cover;
+        background-position: center;
+        aspect-ratio: 27 / 40; // 이미지 비율 유지
+        transition: opacity 0.5s ease;
+            .label {
+                font-size: 32px;
+                font-weight: bold;
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                position: relative;
+                top: 80%;
+                opacity: 0;
+                transition: opacity 0.5s ease;
+            }
+        }
+        .fruit:hover {
+            background-size: contain;
+            .label {
+            opacity: 1;
+            }
+        }
+    }
+
+    .sec3 {
+        width: 100%;
+        background-color: #ff001e;
+        height: auto;
+        padding: 30px 0;
+        >.title{
+            color: #fff;
+        }
+        .sec3-subtitle {
+            color: white;
+            font-size: 3em;
+            text-align: center;
+        }
+        .my-accordion {
+            width: 80%;
+            max-width: 1520px;
+            margin: 0 auto;
+            .accordion-button {
+                font-size: 30px;
+                padding: 20px 20px;
+                background-color: #ff001e;
+                color: #fff;
+                display: flex;
+                justify-content: space-between; /* ← 좌우 정렬 */
+                align-items: center; 
+            }
+            .accordion-button span {flex-grow: 1;}
+
+            .menu-img {
+            width: 100px;
+            height: auto;
+            margin-left: 20px;
+            }
+            .accordion-body{
+                font-size: 2em;
+                text-align: center;
+                padding: 50px 0;
+            }
+        }      
+    }
+
+    .sec4 {
+        width: 80%;
+        max-width: 1520px;
+        margin: 0 auto;
+        >.title {color: #ff001e;}
+        .carousel-wrap {
+            position: relative; // 기준 잡기
+            width: 100%;
+
+            .carousel {
+            position: relative;
+            }
+
+            // 커스텀 화살표 버튼
+            .custom-arrow {
+            width: 130px;
+            height: 130px;
+            object-fit: contain;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            }
+
+            // 이전 버튼 위치: 캐러셀 왼쪽 '밖'
+            .carousel-control-prev .custom-arrow {
+            left: -150px; // ← 캐러셀 너머 바깥쪽으로 이동
+            }
+
+            // 다음 버튼 위치: 캐러셀 오른쪽 '밖'
+            .carousel-control-next .custom-arrow {
+            right: -150px;
+            }
+        }
+
+        // 포스터
+        .posters {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url(../img/bg/sub-bg.png) no-repeat;
+            background-size: contain;
+            margin-top: 30px;
+            .poster{
+                width: 40%;
+                aspect-ratio: 5 / 7;
+                background-size: contain;
+                margin: 30px 0 100px 0;
+            }
+        }
+    }
+}
+
+
+
+
+
+/*이미지 경로*/
+.abo {background: url(../img/fruits/avocado_1.jpg);}
+.banana {background: url(../img/fruits/banana_1.jpg);}
+.orange {background: url(../img/fruits/orange_2.jpg);}
+.kiwi {background: url(../img/fruits/kiwifruit_3.jpg);}
+.blue {background: url(../img/fruits/blueberries_1.jpg);}
+.mango {background: url(../img/fruits/mango_1.jpg);}
+.grape {background: url(../img/fruits/grapefruit_1.jpg);}
+.pine {background: url(../img/fruits/pineapple.jpg);}
+.tomato {background: url(../img/fruits/tomato_1.jpg);}
+.watermelon {background: url(../img/fruits/watermelon_2.jpg);}
+.hongsi {background: url(../img/fruits/hongsi.jpg);}
+.apple {background: url(../img/fruits/apple.jpg);}
+
+// 호버시 이미지 음료로 변경
+.abo:hover {
+    background: url(../img/juice/avocado_juice.png) no-repeat;
+    background-color: #e6fcc2;
+}
+.banana:hover {
+    background: url(../img/juice/banana_juice.png) no-repeat;
+    background-color: #fcf8c2;
+}
+.orange:hover {
+    background: url(../img/juice/orange_juice.png) no-repeat;
+    background-color: #fcdcc2;
+}
+.kiwi:hover {
+    background: url(../img/juice/kiwi_juice.png) no-repeat;
+    background-color: #c2fccc;
+}
+.blue:hover {
+    background: url(../img/juice/blueberry_juice.png) no-repeat;
+    background-color: #d3c2fc;
+}
+.mango:hover {
+    background: url(../img/juice/mango_juice.png) no-repeat;
+    background-color: #fff7b2;
+}
+.grape:hover {
+    background: url(../img/juice/grapesfruit_juice.png) no-repeat;
+    background-color: #fcc2d0;;
+}
+.pine:hover {
+    background: url(../img/juice/pineapple_juice.png) no-repeat;
+    background-color: #fcf3c2;
+}
+.tomato:hover {
+    background: url(../img/juice/tomato_juice.png) no-repeat;
+    background-color: #fcc2c2;
+}
+.watermelon:hover {
+    background: url(../img/juice/watermelon_juice.png) no-repeat;
+    background-color: #7ccc90;
+}
+.hongsi:hover {
+    background: url(../img/juice/hongsi_juice.png) no-repeat;
+    background-color: #fccf8d;
+}
+.apple:hover {
+    background: url(../img/juice/apple_juice.png) no-repeat;
+    background-color: #fcc2c2;
+}
+
+.poster1 {
+    background: url(../img/poster/poster_1.jpg);
+}
+.poster2 {
+    background: url(../img/poster/poster_2.jpg);
+}
