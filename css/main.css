@@ -14,14 +14,14 @@
 }
 /* 본문 */
 @font-face {
-  font-family: "Paperlogy 4";
+  font-family: "Paperlogy";
   src: url("./fonts/Paperlogy-4Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 body {
-  font-family: "Paperlogy 4";
+  font-family: "Paperlogy";
 }
 
 .font-b {
