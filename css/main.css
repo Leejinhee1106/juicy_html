@@ -15,7 +15,7 @@
 /* 본문 */
 @font-face {
   font-family: "Paperlogy 4";
-  src: url("Paperlogy-4Regular.woff2") format("woff2"), url("Paperlogy-4Regular.woff") format("woff");
+  src: url("fonts/Paperlogy-4Regular.woff2") format("woff2"), url("fonts/Paperlogy-4Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
